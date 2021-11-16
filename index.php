@@ -1,5 +1,15 @@
 <?php
 
-$name = 'Przemek';
+require 'Routing.php';
 
-echo 'Hi there, '.$name.' 👋';
+$path = trim($_SERVER['REQUEST_URI'], '/');
+$path = parse_url( $path, PHP_URL_PATH);
+
+Router::get('', 'DefaultController');
+Router::get('home', 'DefaultController');
+Router::get('login', 'DefaultController');
+Router::get('register', 'DefaultController');
+Router::get('home-logged-in', 'DefaultController');
+Router::get('projects', 'DefaultController');
+
+Router::run($path);

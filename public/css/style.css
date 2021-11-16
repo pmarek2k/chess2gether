@@ -1,6 +1,7 @@
 :root {
     --main-text-color: white;
     font-family: "Rockwell";
+    font-size: 3vw;
 }
 
 
@@ -15,7 +16,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
+
+
 
 h1 {
     margin: 0;
@@ -30,12 +34,22 @@ hr {
     opacity: 0;
 }
 
+input {
+    width: 25vw;
+    height: 5vh;
+}
+
+input::placeholder {
+    text-align: left;
+    font-size: 1vw;
+}
+
 .navbar {
     display: flex;
     width: 100%;
     height: 12vh;
     background-color: #34140E;
-    font-size: 4vw;
+    
     align-items: center;
     justify-content: space-between;
 }
@@ -50,16 +64,93 @@ hr {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-size: 4vw;
     padding-top: 4vh;
 }
 
+.main-content-paragraph{
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+}
+
 .sign-up-button {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #D3AF66 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
-    border-radius: 88px;
+    border-radius: 15vw;
     opacity: 1;
     width: 20vw;
     height: 10vh;
+}
+
+.sign-up-form {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+    font-size: 3vw;
+
+    width: 40vw;
+    height: 60vh;
+    background: #D3AF66 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 5vw;
+    opacity: 1;
+}
+
+.arrow {
+    width:7vw;
+    height:12vh;
+    border: 3px solid #ffffff;
+    border-radius: 2vw;
+}
+
+.main-content-event {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding-top: 13vh;
+}
+
+.event-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 40vw;
+    height: 60vh;
+    background: #D3AF66 0% 0% no-repeat padding-box;
+    border-radius: 7vw;
+    opacity: 1;
+}
+
+.inner-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 15vh;
+    background: #34140E 0% 0% no-repeat padding-box;
+    border-radius: 4vw;
+    font-size: 2vw;
+}
+
+.or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #7070709f;;
+    width: 10vw;
+    height: 15vh;
+    border-radius: 10vw;
+    border: 1px solid #707070;
 }
