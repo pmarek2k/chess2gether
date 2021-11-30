@@ -13,5 +13,6 @@ Router::get('login', 'DefaultController');
 Router::get('register', 'DefaultController');
 Router::get('home_logged_in', 'DefaultController');
 Router::get('projects', 'DefaultController');
+Router::get('location', 'DefaultController');
 
 Router::run($path);

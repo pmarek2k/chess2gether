@@ -166,5 +166,14 @@ input::placeholder {
     border-radius: 10vw;
     border: 1px solid #707070;
     margin-left: 1vw;
-    margin-right: 1vw;
+    margin-right: 1vw
+}
+
+#map{
+    margin-top: 2vh;
+    width: 60vw;
+    height: 65vh;
+
+    border-radius: 3vw;
+    border: 1px solid #707070;
 }

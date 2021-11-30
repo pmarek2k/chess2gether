@@ -28,4 +28,8 @@ class DefaultController extends AppController {
     {
         $this->render('home');
     }
+
+    public function location(){
+        $this->render('location');
+    }
 }
