@@ -163,4 +163,13 @@
         margin-top: 1vw;
         margin-bottom: 1vw;
     }
+
+    #map{
+        margin-top: 2vh;
+        width: 80vw;
+        height: 65vh;
+
+        border-radius: 3vw;
+        border: 1px solid #707070;
+    }
 }
