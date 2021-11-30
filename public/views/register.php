@@ -7,27 +7,26 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
-    <title>LOGIN</title>
+    <title>SIGN UP</title>
 </head>
 <body>
     <div class = navbar>
-        <div class = logo>
-            <a style="color: #D3AF66;" class = hvr-underline-from-center href = "home">chess2gether</a>
-        </div>
+            <a class = hvr-underline-from-center href = "home">chess2gether</a>
         <a class = hvr-underline-from-center href = "login">Log in</a>
     </div>
     <div class = main-content>
         <div class = sign-up-form>
-            Sign in
+            Register
             <form>
+                <input type="email" id="femail" name="femail" placeholder="E-mail"><br>
                 <input type="text" id="fusername" name="fusername" placeholder="Username"> <br>
                 <input type="password" id="fpassword" name="fpassword" placeholder="Password">
+                
             </form>
             <div class = submit-arrow>
                 <input type="image" src = "public/img/arrow.png" class=arrow alt="Arrow">
             </div>
-            <a href=. style="font-size: 1vw;">Forgot password?</a>
-            <a href="register" style="font-size: 1vw;">Create account</a>
+            <a href="login">Already have account?<br>Log in</a>
         </div>
     </div>
 </body>

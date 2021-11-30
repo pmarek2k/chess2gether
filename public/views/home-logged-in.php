@@ -11,10 +11,8 @@
 </head>
 <body>
         <div class = navbar>
-        <div class = logo>
-            <a style="color: #D3AF66;" class = hvr-underline-from-center href = >chess2gether</a>
-        </div>
-        <a class = hvr-underline-from-center href = >Log in</a>
+            <a class = hvr-underline-from-center href = "home">chess2gether</a>
+        <a class = hvr-underline-from-center href = >USERNAME</a>
     </div>
     <div class = main-content-event>
         <div class = event-box>

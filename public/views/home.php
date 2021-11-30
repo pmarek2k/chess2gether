@@ -11,9 +11,7 @@
 </head>
 <body>
         <div class = navbar>
-        <div class = logo>
-            <a style="color: #D3AF66;" class = hvr-underline-from-center href = home>chess2gether</a>
-        </div>
+            <a class = hvr-underline-from-center href = home>chess2gether</a>
         <a class = hvr-underline-from-center href = "login">Log in</a>
     </div>
     <div class = main-content>
