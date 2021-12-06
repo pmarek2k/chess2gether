@@ -21,11 +21,12 @@
                 <input type="email" id="femail" name="femail" placeholder="E-mail"><br>
                 <input type="text" id="fusername" name="fusername" placeholder="Username"> <br>
                 <input type="password" id="fpassword" name="fpassword" placeholder="Password">
+                <div class = submit-arrow>
+                    <input class=submit type = "image" src = "public/img/arrow.png" alt="Arrow">
+                </div>
                 
             </form>
-            <div class = submit-arrow>
-                <input type="image" src = "public/img/arrow.png" class=arrow alt="Arrow">
-            </div>
+
             <a href="login">Already have account?<br>Log in</a>
         </div>
     </div>

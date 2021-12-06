@@ -32,4 +32,8 @@ class DefaultController extends AppController {
     public function location(){
         $this->render('location');
     }
+
+    public function profile(){
+        $this->render('profile');
+    }
 }

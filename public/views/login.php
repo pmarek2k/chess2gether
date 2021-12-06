@@ -17,17 +17,26 @@
     <div class = main-content>
         <div class = sign-up-form>
             Sign in
-            <form>
+            <form action="login" method="POST">
+
                 <input type="text" id="fusername" name="fusername" placeholder="Username"> <br>
                 <input type="password" id="fpassword" name="fpassword" placeholder="Password">
+                <div class = "messages">
+                    <?php if(isset($messages)) {
+                        foreach ($messages as $message){
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
+                <div class = submit-arrow>
+                    <input class = submit type="image" src = "public/img/arrow.png" class=arrow alt="Arrow">
+                </div>
             </form>
 <!--            <div class = result-message>-->
 <!---->
 <!--            </div>-->
-            <div class = submit-arrow>
-                <input type="image" src = "public/img/arrow.png" class=arrow alt="Arrow">
-            </div>
-            <a href=. style = "font-size: 4vw">Forgot password?</a>
+            <a href=. >Forgot password?</a>
             <a href="register">Create account</a>
         </div>
     </div>
