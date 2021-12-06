@@ -17,10 +17,17 @@
     <div class = main-content>
         <div class = sign-up-form>
             Register
-            <form>
-                <input type="email" id="femail" name="femail" placeholder="E-mail"><br>
-                <input type="text" id="fusername" name="fusername" placeholder="Username"> <br>
-                <input type="password" id="fpassword" name="fpassword" placeholder="Password">
+            <form action = "register" method="POST">
+                <input type="email" id="email" name="email" placeholder="E-mail"><br>
+                <input type="text" id="username" name="username" placeholder="Username"> <br>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <div class = "messages">
+                    <?php if(isset($messages)) {
+                        foreach ($messages as $message){
+                            echo $message;
+                        }
+                    }
+                    ?>
                 <div class = submit-arrow>
                     <input class=submit type = "image" src = "public/img/arrow.png" alt="Arrow">
                 </div>

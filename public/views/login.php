@@ -19,8 +19,8 @@
             Sign in
             <form action="login" method="POST">
 
-                <input type="text" id="fusername" name="fusername" placeholder="Username"> <br>
-                <input type="password" id="fpassword" name="fpassword" placeholder="Password">
+                <input type="text" id="email" name="email" placeholder="Username"> <br>
+                <input type="password" id="password" name="password" placeholder="Password">
                 <div class = "messages">
                     <?php if(isset($messages)) {
                         foreach ($messages as $message){
