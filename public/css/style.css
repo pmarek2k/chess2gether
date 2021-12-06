@@ -109,12 +109,16 @@ input::placeholder {
     font-size: 1vw;
 }
 
-.arrow {
-    width:7vw;
-    height:12vh;
-    border: 3px solid #ffffff;
-    border-radius: 2vw;
+.sign-up-form > a:nth-last-child(2){
+    font-size: 1vw;
 }
+
+/*.arrow {*/
+/*    width:7vw;*/
+/*    height:12vh;*/
+/*    border: 3px solid #ffffff;*/
+/*    border-radius: 2vw;*/
+/*}*/
 
 .main-content-event {
     display: flex;
@@ -166,5 +170,54 @@ input::placeholder {
     border-radius: 10vw;
     border: 1px solid #707070;
     margin-left: 1vw;
-    margin-right: 1vw;
+    margin-right: 1vw
+}
+
+#map{
+    margin-top: 2vh;
+    width: 60vw;
+    height: 65vh;
+
+    border-radius: 3vw;
+    border: 1px solid #707070;
+}
+
+.edit-menu{
+    width: 100%;
+    background-color: rgba(52, 20, 14, 0.33);
+}
+.user-profile{
+    margin: 1vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-image{
+    display:flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.user-image > img{
+    width: 15vw;
+    height: 15vh;
+}
+
+.submit-arrow .submit{
+    background: url("public/img/arrow.png") no-repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    width:7vw;
+    height:12vh;
+    border: 3px solid #ffffff;
+    border-radius: 2vw;
+    margin-top: 1vh;
+}
+
+.messages {
+    color: black;
+    font-size: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
