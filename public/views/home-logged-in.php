@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
-    <script src="script.js"></script>
+    <script src="public/js/script.js"></script>
     <title>Home</title>
 </head>
 <body>
