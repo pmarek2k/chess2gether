@@ -10,35 +10,36 @@
     <title>LOGIN</title>
 </head>
 <body>
-    <div class = navbar>
-        <a class = hvr-underline-from-center href = "home">chess2gether</a>
-        <a class = hvr-underline-from-center href = "login">Log in</a>
-    </div>
-    <div class = main-content>
-        <div class = sign-up-form>
-            Sign in
-            <form action="login" method="POST">
+<div class=navbar>
+    <a class=hvr-underline-from-center href="home">chess2gether</a>
+    <a class=hvr-underline-from-center href="login">Log in</a>
+</div>
+<div class=main-content>
+    <div class=sign-up-form>
+        Sign in
+        <form action="login" method="POST">
 
-                <input type="text" id="email" name="email" placeholder="Username"> <br>
-                <input type="password" id="password" name="password" placeholder="Password">
-                <div class = "messages">
-                    <?php if(isset($messages)) {
-                        foreach ($messages as $message){
-                            echo $message;
-                        }
+            <input type="text" id="email" name="email" placeholder="Username"> <br>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <div class="messages">
+                <?php if (isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                        echo '<br>';
                     }
-                    ?>
-                </div>
-                <div class = submit-arrow>
-                    <input class = submit type="image" src = "public/img/arrow.png" class=arrow alt="Arrow">
-                </div>
-            </form>
-<!--            <div class = result-message>-->
-<!---->
-<!--            </div>-->
-            <a href=. >Forgot password?</a>
-            <a href="register">Create account</a>
-        </div>
+                }
+                ?>
+            </div>
+            <div class=submit-arrow>
+                <input class=submit type="image" src="public/img/arrow.png" class=arrow alt="Arrow">
+            </div>
+        </form>
+        <!--            <div class = result-message>-->
+        <!---->
+        <!--            </div>-->
+        <a href=.>Forgot password?</a>
+        <a href="register">Create account</a>
     </div>
+</div>
 </body>
 </html>

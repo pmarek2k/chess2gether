@@ -17,6 +17,14 @@ class User {
         $this->username = $username;
     }
 
+    /**
+     * @return string
+     */
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
 
 
     public function getEmail(): string

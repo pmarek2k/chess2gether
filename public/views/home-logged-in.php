@@ -7,35 +7,49 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
+    <script src="script.js"></script>
     <title>Home</title>
 </head>
 <body>
-        <div class = navbar>
-            <a class = hvr-underline-from-center href = "home">chess2gether</a>
-        <a class = hvr-underline-from-center href = >USERNAME</a>
-    </div>
-    <div class = main-content-event>
-        <div class = event-box>
-            Join an event
-            <div class = inner-box>
-                Join already existing event
-            </div>
-            <div class = submit-arrow>
-                <a href=.><img src = "public/img/arrow.png" class=arrow alt="Arrow"></a>
-            </div>
-        </div>
-        <div class = or>
-            OR
-        </div>
-        <div class = event-box>
-            Create an event
-            <div class = inner-box>
-                Start new event
-            </div>
-            <div class = submit-arrow>
-                <a href=.><img src = "public/img/arrow.png" class=arrow alt="Arrow"></a>
-            </div>
+<div class=navbar>
+    <a class=hvr-underline-from-center href="home">chess2gether</a>
+    <div class="dropdown">
+        <button onClick="myFunction()" class="hvr-underline-from-center dropbtn">
+            <?php
+            echo $_COOKIE["user"];
+            ?>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="profile">Profile</a>
+            <form action=home method="POST">
+                <input type="submit" class="logout" value="Logout"></input>
+            </form>
+
         </div>
     </div>
+</div>
+<div class=main-content-event>
+    <div class=event-box>
+        Join an event
+        <div class=inner-box>
+            Join already existing event
+        </div>
+        <div class=submit-arrow>
+            <a href=.><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
+        </div>
+    </div>
+    <div class=or>
+        OR
+    </div>
+    <div class=event-box>
+        Create an event
+        <div class=inner-box>
+            Start new event
+        </div>
+        <div class=submit-arrow>
+            <a href=.><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

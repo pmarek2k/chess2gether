@@ -15,8 +15,8 @@ class SecurityController extends AppController {
         }
 
         $email = $_POST['email'];
-        $password = $_POST['password'];
 
+        $password = $_POST['password'];
         $user = $userRepository->getUser($email);
 
         if(!$user){
@@ -27,16 +27,21 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email does not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
+
+        $cookie_name = "user";
+        $cookie_value = $user->getUsername();
+        setcookie($cookie_name, $cookie_value, time() + (86400), "/");
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/home");
     }
 
-    //TODO: Implement register function
     public function register(){
+
+        $userRepository = new UserRepository();
 
         if (!$this->isPost()) {
             return $this->render('register');
@@ -44,14 +49,25 @@ class SecurityController extends AppController {
 
         $email = $_POST['email'];
         $username = $_POST['username'];
-        $password = $_POST['password'];
 
-        $user = new User($email, $username, $password);
+        $user = $userRepository->getUser($email);
+        if($user != null){
+            return $this->render('register', ['messages' => ['User with that email already exists!']]);
+        }
 
-        // TODO: check if user exists in database
+        if($userRepository->usernameAlreadyExists($username)){
+            return $this->render('register', ['messages' => ['Username already taken!']]);
+        }
 
+        $user = new User($email, $username, password_hash($_POST['password'], PASSWORD_DEFAULT));
+        $userRepository->addUser($user);
+
+        $cookie_name = "user";
+        $cookie_value = $user->getUsername();
+        setcookie($cookie_name, $cookie_value, time() + (86400), "/");
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/home");
     }
+
 }

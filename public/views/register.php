@@ -10,32 +10,33 @@
     <title>SIGN UP</title>
 </head>
 <body>
-    <div class = navbar>
-            <a class = hvr-underline-from-center href = "home">chess2gether</a>
-        <a class = hvr-underline-from-center href = "login">Log in</a>
-    </div>
-    <div class = main-content>
-        <div class = sign-up-form>
-            Register
-            <form action = "register" method="POST">
-                <input type="email" id="email" name="email" placeholder="E-mail"><br>
-                <input type="text" id="username" name="username" placeholder="Username"> <br>
-                <input type="password" id="password" name="password" placeholder="Password">
-                <div class = "messages">
-                    <?php if(isset($messages)) {
-                        foreach ($messages as $message){
-                            echo $message;
-                        }
+<div class=navbar>
+    <a class=hvr-underline-from-center href="home">chess2gether</a>
+    <a class=hvr-underline-from-center href="login">Log in</a>
+</div>
+<div class=main-content>
+    <div class=sign-up-form>
+        Register
+        <form action="register" method="POST">
+            <input type="email" id="email" name="email" placeholder="E-mail"><br>
+            <input type="text" id="username" name="username" placeholder="Username"> <br>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <div class="messages">
+                <?php if (isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                        echo '<br>';
                     }
-                    ?>
-                <div class = submit-arrow>
-                    <input class=submit type = "image" src = "public/img/arrow.png" alt="Arrow">
+                }
+                ?>
+                <div class=submit-arrow>
+                    <input class=submit type="image" src="public/img/arrow.png" alt="Arrow">
                 </div>
-                
-            </form>
 
-            <a href="login">Already have account?<br>Log in</a>
-        </div>
+        </form>
+
+        <a href="login">Already have account?<br>Log in</a>
     </div>
+</div>
 </body>
 </html>
