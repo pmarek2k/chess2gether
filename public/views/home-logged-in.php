@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
-    <script src="public/js/script.js"></script>
+    <script src="public/js/navbar.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -20,7 +20,6 @@
             ?>
         </button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="profile">Profile</a>
             <form action=home method="POST">
                 <input type="submit" class="logout" value="Logout"></input>
             </form>
@@ -35,7 +34,7 @@
             Join already existing event
         </div>
         <div class=submit-arrow>
-            <a href=.><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
+            <a href="chooseLocation"><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
         </div>
     </div>
     <div class=or>
@@ -47,7 +46,7 @@
             Start new event
         </div>
         <div class=submit-arrow>
-            <a href=.><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
+            <a href=createLocation><img src="public/img/arrow.png" class=submit alt="Arrow"></a>
         </div>
     </div>
 </div>

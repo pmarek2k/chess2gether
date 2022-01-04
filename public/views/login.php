@@ -19,8 +19,8 @@
         Sign in
         <form action="login" method="POST">
 
-            <input type="text" id="email" name="email" placeholder="Username"> <br>
-            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="text" id="email" name="email" placeholder="Email" required> <br>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <div class="messages">
                 <?php if (isset($messages)) {
                     foreach ($messages as $message) {
@@ -34,9 +34,6 @@
                 <input class=submit type="image" src="public/img/arrow.png" class=arrow alt="Arrow">
             </div>
         </form>
-        <!--            <div class = result-message>-->
-        <!---->
-        <!--            </div>-->
         <a href=.>Forgot password?</a>
         <a href="register">Create account</a>
     </div>

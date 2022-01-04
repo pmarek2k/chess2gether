@@ -12,8 +12,7 @@ Router::get('home', 'DefaultController');
 Router::get('login', 'SecurityController');
 Router::get('register', 'SecurityController');
 Router::get('home-logged-in', 'DefaultController');
-Router::get('projects', 'DefaultController');
-Router::get('location', 'DefaultController');
-Router::get('profile', 'DefaultController');
+Router::get('createLocation', 'LocationController');
+Router::get('chooseLocation', 'LocationController');
 
 Router::run($path);

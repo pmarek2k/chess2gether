@@ -4,14 +4,13 @@ class User {
     private $email;
     private $password;
     private $username;
-    private $name;
-    private $surname;
 
     public function __construct(
         string $email,
         string $username,
         string $password
-    ) {
+    )
+    {
         $this->email = $email;
         $this->password = $password;
         $this->username = $username;
@@ -25,8 +24,6 @@ class User {
         return $this->username;
     }
 
-
-
     public function getEmail(): string
     {
         return $this->email;
@@ -35,5 +32,29 @@ class User {
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getElo()
+    {
+        return $this->elo;
     }
 }

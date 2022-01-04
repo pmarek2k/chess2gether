@@ -16,12 +16,22 @@ class DefaultController extends AppController {
 
     public function login()
     {
-        $this->render('login');
+        if(isset($_COOKIE["user"])){
+            $this->render("home-logged-in");
+        }
+        else{
+            $this->render('login');
+        }
     }
 
     public function register()
     {
-        $this->render('register');
+        if(isset($_COOKIE["user"])){
+            $this->render("home-logged-in");
+        }
+        else{
+            $this->render('register');
+        }
     }
 
     public function home()
@@ -43,10 +53,22 @@ class DefaultController extends AppController {
     }
 
     public function location(){
-        $this->render('location');
+        if(isset($_COOKIE["user"])){
+            $this->render("location");
+        }
+        else{
+            $this->render('login');
+        }
     }
 
     public function profile(){
-        $this->render('profile');
+        if(isset($_COOKIE["user"])){
+            $this->render("profile");
+        }
+        else{
+            $this->render('login');
+        }
     }
+
+
 }

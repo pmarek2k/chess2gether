@@ -8,7 +8,11 @@
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
 
-    <script src="public/js/script.js"></script>
+    <script src="public/js/navbar.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src="public/js/createLocation.js" type="module" defer></script>
+
     <title>Home</title>
 </head>
 <body>
@@ -21,25 +25,21 @@
             ?>
         </button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="profile">Profile</a>
             <form action=home method="POST">
-                <input type="submit" class="logout" value="Logout"></input>
+                <input type="submit" class="logout" value="Logout">
             </form>
 
         </div>
     </div>
 </div>
-<div class=edit-menu>
-    <!-- TODO: implement edit menu -->
-    <div class=user-profile>
-        <div class=user-image>
-            <img src="public/img/profile-pic.png">
-            <form action="/action_page.php">
-                <input type="file" id="myFile" name="filename">
-                <input type="submit">
-            </form>
-        </div>
-    </div>
+<div class=main-content>
+    <div id='map'></div>
+    <form method="post">
+        <input type="text" id="longitude" name="longitude" hidden = true>
+        <input type="latitude" id="latitude" name="latitude" hidden = true>
+        <button class="submitMarkerButton">Choose location</button>
+    </form>
+
 </div>
 </body>
 </html>

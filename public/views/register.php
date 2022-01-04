@@ -18,9 +18,9 @@
     <div class=sign-up-form>
         Register
         <form action="register" method="POST">
-            <input type="email" id="email" name="email" placeholder="E-mail"><br>
-            <input type="text" id="username" name="username" placeholder="Username"> <br>
-            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="email" id="email" name="email" placeholder="E-mail" required><br>
+            <input type="text" id="username" name="username" placeholder="Username" required> <br>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <div class="messages">
                 <?php if (isset($messages)) {
                     foreach ($messages as $message) {

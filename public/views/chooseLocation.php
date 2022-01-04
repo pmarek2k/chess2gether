@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
 
-    <script src="public/js/script.js"></script>
+    <script src="public/js/navbar.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src="public/js/chooseLocation.js" type="module" defer></script>
 
     <title>Home</title>
 </head>
@@ -24,7 +25,6 @@
             ?>
         </button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="profile">Profile</a>
             <form action=home method="POST">
                 <input type="submit" class="logout" value="Logout"></input>
             </form>
@@ -34,15 +34,6 @@
 </div>
 <div class=main-content>
     <div id='map'></div>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoidGl4aWFubyIsImEiOiJja3dseWFldG4waDNmMzBsbnJqcXFobnVyIn0.i1K3Zp02kzh9YSrF1jl1aQ';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [19.944981, 50.064651], // starting position [lng, lat]
-            zoom: 12 // starting zoom
-        });
-    </script>
 </div>
 </body>
 </html>
