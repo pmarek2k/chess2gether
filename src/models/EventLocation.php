@@ -9,7 +9,7 @@ class EventLocation
      * @param $longitude
      * @param $latitude
      */
-    public function __construct(double $longitude, double $latitude)
+    public function __construct(string $longitude, string $latitude)
     {
         $this->longitude = $longitude;
         $this->latitude = $latitude;

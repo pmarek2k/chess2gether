@@ -130,6 +130,26 @@ input::placeholder {
     padding-top: 13vh;
 }
 
+.map-main-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+.map-main-content form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.map-main-content form input {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
 .event-box {
     display: flex;
     flex-direction: column;

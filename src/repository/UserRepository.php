@@ -27,7 +27,7 @@ class UserRepository extends Repository
         );
     }
 
-    public function getUserByUsername(string $username) : ?User{
+    public function getUserIdByUsername(string $username) : ?int{
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users WHERE username = :username
         ');
@@ -40,11 +40,7 @@ class UserRepository extends Repository
             return null;
         }
 
-        return new User(
-            $user['email'],
-            $user['username'],
-            $user['password']
-        );
+        return $user["id"];
     }
 
     public function addUser(User $user){

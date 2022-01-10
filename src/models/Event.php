@@ -3,6 +3,8 @@
 class Event
 {
 
+    private $creatorId;
+    private $locationId;
     private $name;
     private $max_players;
     private $begin_time;
@@ -12,11 +14,29 @@ class Event
      * @param $max_players
      * @param $begin_time
      */
-    public function __construct(string $name, int $max_players, date $begin_time)
+    public function __construct(int $creatorId, int $locationId, $name, int $max_players, DateTime $begin_time)
     {
+        $this->creatorId = $creatorId;
+        $this->locationId = $locationId;
         $this->name = $name;
         $this->max_players = $max_players;
         $this->begin_time = $begin_time;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCreatorId(): int
+    {
+        return $this->creatorId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLocationId(): int
+    {
+        return $this->locationId;
     }
 
     /**
@@ -36,9 +56,9 @@ class Event
     }
 
     /**
-     * @return date
+     * @return DateTime
      */
-    public function getBeginTime(): date
+    public function getBeginTime(): DateTime
     {
         return $this->begin_time;
     }
