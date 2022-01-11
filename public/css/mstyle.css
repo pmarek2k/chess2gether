@@ -5,6 +5,10 @@
         font-size: 6vw;
     }
 
+    button, input, a{
+        font-family: "Rockwell";
+    }
+
 
     body {
         color: var(--main-text-color);
@@ -184,7 +188,7 @@
         width:18vw;
         height:12vh;
         border: 3px solid #ffffff;
-        border-radius: 2vw;
+        border-radius: 4vw;
         margin-top: 1vh;
     }
 
@@ -203,7 +207,7 @@
         border: none;
         cursor: pointer;
 
-        font-size: 3vw;
+        font-size: 6vw;
     }
 
     .dropdown-content {
@@ -233,7 +237,7 @@
         cursor: pointer;
         color: white;
         text-decoration: none;
-        font-size: 2vw;
+        font-size: 4vw;
         width: auto;
     }
 

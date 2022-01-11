@@ -14,7 +14,7 @@ class Event
      * @param $max_players
      * @param $begin_time
      */
-    public function __construct(int $creatorId, int $locationId, $name, int $max_players, DateTime $begin_time)
+    public function __construct(int $creatorId, int $locationId, string $name, int $max_players, DateTime $begin_time)
     {
         $this->creatorId = $creatorId;
         $this->locationId = $locationId;

@@ -22,4 +22,49 @@ class EventRepository extends Repository
         $stmt->bindParam(':begin_time', $begin_time, PDO::PARAM_STR);
         $stmt->execute();
     }
+
+    public function getAllEvents(): ?array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.event;
+        ');
+        $stmt->execute();
+        $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($events as $event) {
+            $result[] = new Event(
+                $event['creator'],
+                $event['location'],
+                $event['name'],
+                $event['max_players'],
+                new DateTime($event['begin_time'])
+            );
+        }
+
+        return $result;
+    }
+
+    public function getEventIdByEventName(string $eventName){
+        $stmt = $this->database->connect()->prepare("
+            SELECT * FROM public.event WHERE name = :name
+        ");
+        $stmt->bindParam(':name', $eventName, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result[0]["id"];
+    }
+
+    public function getEventMaxPlayersByEventId(string $eventId) :string{
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.event WHERE id = :id
+        ');
+        $stmt->bindParam(':id', $eventId, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result[0]["max_players"];
+    }
 }

@@ -86,4 +86,22 @@ class UserRepository extends Repository
 
         $stmt->execute();
     }
+
+    public function getUsernameById(int $id){
+        $stmt = $this->database->connect()->prepare('
+        SELECT * from public.users where id = :id
+        ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user == false) {
+            return null;
+        }
+
+        return $user["username"];
+    }
 }

@@ -36,4 +36,25 @@ class EventLocationRepository extends Repository
         return $selectedEvent["id"];
     }
 
+    public function getLocationNameById(int $id) :?EventLocation {
+        $stmt = $this->database->connect()->prepare('
+        SELECT * from public."eventLocation" where id = :id
+        ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        $location = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($location == false) {
+            return null;
+        }
+
+        return new EventLocation(
+            $location["longitude"],
+            $location["latitude"]
+        );
+    }
+
 }

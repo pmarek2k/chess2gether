@@ -16,22 +16,10 @@
     <title>Home</title>
 </head>
 <body>
-<div class=navbar>
-    <a class=hvr-underline-from-center href=home>chess2gether</a>
-    <div class="dropdown">
-        <button onClick="myFunction()" class="hvr-underline-from-center dropbtn">
-            <?php
-            echo $_COOKIE["user"];
-            ?>
-        </button>
-        <div id="myDropdown" class="dropdown-content">
-            <form action=home method="POST">
-                <input type="submit" class="logout" value="Logout">
-            </form>
-
-        </div>
-    </div>
-</div>
+<?php
+include 'navbar.php';
+echo createNavbar();
+?>
 <div class=map-main-content>
     <div id='map'></div>
     <form method="post">
@@ -42,7 +30,7 @@
         <input class = "datetime" type="datetime-local" id="meeting-time"
                name="meeting-time" value="2018-06-12T19:30"
                min="2022-01-01T00:00" max="2100-01-01T00:00" required>
-        <button class="submitMarkerButton">Choose location</button>
+        <button class="submitMarkerButton">Create event</button>
     </form>
 
 </div>

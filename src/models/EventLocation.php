@@ -1,6 +1,6 @@
 <?php
 
-class EventLocation
+class EventLocation implements JsonSerializable
 {
     private $longitude;
     private $latitude;
@@ -13,6 +13,14 @@ class EventLocation
     {
         $this->longitude = $longitude;
         $this->latitude = $latitude;
+    }
+
+    public function jsonSerialize() :array
+    {
+        return [
+            'longitude' => doubleval($this->getLongitude()),
+            'latitude' => doubleval($this->getLatitude())
+        ];
     }
 
     /**

@@ -2,7 +2,7 @@ import {accessToken} from './config.js';
 
 mapboxgl.accessToken = accessToken;
 
-let map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [19.944981, 50.064651], // starting position [lng, lat]

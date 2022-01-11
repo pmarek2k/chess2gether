@@ -11,22 +11,10 @@
     <title>Home</title>
 </head>
 <body>
-<div class=navbar>
-    <a class=hvr-underline-from-center href="home">chess2gether</a>
-    <div class="dropdown">
-        <button onClick="myFunction()" class="hvr-underline-from-center dropbtn">
-            <?php
-            echo $_COOKIE["user"];
-            ?>
-        </button>
-        <div id="myDropdown" class="dropdown-content">
-            <form action=home method="POST">
-                <input type="submit" class="logout" value="Logout"></input>
-            </form>
-
-        </div>
-    </div>
-</div>
+<?php
+include 'navbar.php';
+echo createNavbar();
+?>
 <div class=main-content-event>
     <div class=event-box>
         Join an event
