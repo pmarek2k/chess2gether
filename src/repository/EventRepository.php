@@ -67,4 +67,16 @@ class EventRepository extends Repository
 
         return $result[0]["max_players"];
     }
+
+    public function getEventByEventId(int $eventId): Event
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.event WHERE id = :id
+        ');
+        $stmt->bindParam(':id', $eventId, PDO::PARAM_STR);
+        $stmt->execute();
+        $event = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return new Event($event["creator"], $event["location"], $event["name"], $event["max_players"], new DateTime($event["begin_time"]));
+    }
 }

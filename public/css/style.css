@@ -343,3 +343,26 @@ input::placeholder {
 .submitMarkerButton::-webkit-details-marker {
     display: none;
 }
+
+/* /events */
+
+#event-view {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /*align-items: center;*/
+}
+
+.event {
+    font-size: 2vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 3vw;
+    border: 1px solid #707070;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: #D3AF66 0% 0% no-repeat padding-box;
+    height: 10vh;
+    align-items: center;
+}

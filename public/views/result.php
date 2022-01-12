@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href="public/css/min-hover.css">
     <link rel="stylesheet" type="text/css" href="public/css/mstyle.css">
 
-    <title>Home</title>
+    <script src="public/js/result.js" defer></script>
+
+    <title>Result</title>
 </head>
 <body>
 <?php

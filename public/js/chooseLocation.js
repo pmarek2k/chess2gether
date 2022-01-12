@@ -41,7 +41,6 @@ function loadEvents(events) {
 function addMarkers(geojson){
     for (const feature of geojson.features) {
         const el = document.createElement('div');
-        console.log(feature);
         el.className = 'marker';
 
         // make a marker for each feature and add to the map

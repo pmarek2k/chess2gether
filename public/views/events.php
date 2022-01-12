@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/mapstyle.css">
 
     <script src="public/js/navbar.js"></script>
+    <script src="public/js/events.js" defer></script>
 
     <title>Events</title>
 </head>
@@ -18,6 +19,16 @@
 include 'navbar.php';
 echo createNavbar();
 ?>
-
+<div class="messages">
+    <?php if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo $message;
+            echo '<br>';
+        }
+    }
+    ?>
+</div>
+<div id = "event-view">
+</div>
 </body>
 </html>

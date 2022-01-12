@@ -25,8 +25,6 @@ class LocationController extends AppController
             $userId = $userRepository->getUserIdByUsername($_COOKIE["user"]);
             $eventId = $eventRepository->getEventIdByEventName($eventName);
 
-            //TODO: check if players is already in event
-
             $max_players = $eventRepository->getEventMaxPlayersByEventId($eventId);
             if($userEventRepository->playerTakesPartInEvent($userId, $eventId)){
                 return $this->render('chooseLocation', ['messages' => ['You are already signed to that event']]);
@@ -73,8 +71,8 @@ class LocationController extends AppController
 
         $eventRepository->addEvent($event);
 
-        // TODO: add successfully added page
-            return $this->render('result', ['messages' => ['Event created succesfully']]);
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/result");
         }
 
     }
@@ -101,12 +99,14 @@ class LocationController extends AppController
                 $user = $userRepository->getUsernameById($userId);
                 $location = $eventLocationRepository->getLocationNameById($locationId);
                 $eventModels[] = new EventModel($user, $location, $event->getName(), $event->getMaxPlayers(), $event->getBeginTime());
-
-
             }
 
             echo json_encode($eventModels);
         }
+    }
+
+    public function result(){
+        $this->render('result', ['messages' => ['Event created succesfully']]);
     }
 
 }

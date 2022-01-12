@@ -34,7 +34,7 @@ echo createNavbar();
     </div>
     <form method="post">
         <input type="text" id="event-name" name="event-name" hidden = true>
-        <button class="submitMarkerButton">Choose location</button>
+        <button class="submitMarkerButton">Choose event</button>
     </form>
 </div>
 </body>

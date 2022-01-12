@@ -17,5 +17,6 @@ Router::get('chooseLocation', 'LocationController');
 Router::get('getLocations', 'LocationController');
 Router::get('result', 'LocationController');
 Router::get('events', 'EventController');
+Router::get('getEvents', 'EventController');
 
 Router::run($path);
