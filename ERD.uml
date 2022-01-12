@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>e8f0d22d-4322-4da6-9b45-892e349c633a</OriginalElement>
+  <nodes>
+    <node x="99.0" y="460.0">e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.userEvent</node>
+    <node x="196.0" y="44.0">e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.eventLocation</node>
+    <node x="113.75" y="241.0">e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.event</node>
+    <node x="20.0" y="0.0">e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.users</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.event" target="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.users" relationship="REFERENCES">
+      <point x="-42.5" y="-83.5" />
+      <point x="156.25" y="215.0" />
+      <point x="137.0" y="215.0" />
+      <point x="39.0" y="94.5" />
+    </edge>
+    <edge source="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.userEvent" target="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.event" relationship="REFERENCES">
+      <point x="26.0" y="-39.0" />
+      <point x="177.0" y="434.0" />
+      <point x="198.75" y="434.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.event" target="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.eventLocation" relationship="REFERENCES">
+      <point x="42.5" y="-83.5" />
+      <point x="241.25" y="215.0" />
+      <point x="285.5" y="215.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.userEvent" target="e8f0d22d-4322-4da6-9b45-892e349c633a.TABLE:dcv931gqgrolfo.public.users" relationship="REFERENCES">
+      <point x="-26.0" y="-39.0" />
+      <point x="125.0" y="434.0" />
+      <point x="92.75" y="434.0" />
+      <point x="92.75" y="215.0" />
+      <point x="59.0" y="215.0" />
+      <point x="-39.0" y="94.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="187.5" y="269.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

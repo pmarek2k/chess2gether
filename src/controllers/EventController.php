@@ -1,38 +1,37 @@
 <?php
 
 require_once 'AppController.php';
-require_once __DIR__ .'/../repository/UserRepository.php';
-require_once __DIR__ .'/../repository/EventRepository.php';
-require_once __DIR__ .'/../repository/UserEventRepository.php';
-require_once __DIR__ .'/../repository/EventLocationRepository.php';
-require_once __DIR__ .'/../models/Event.php';
-require_once __DIR__ .'/../models/EventLocation.php';
-require_once __DIR__ .'/../models/EventModel.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__ . '/../repository/EventRepository.php';
+require_once __DIR__ . '/../repository/UserEventRepository.php';
+require_once __DIR__ . '/../repository/EventLocationRepository.php';
+require_once __DIR__ . '/../models/Event.php';
+require_once __DIR__ . '/../models/EventLocation.php';
+require_once __DIR__ . '/../models/EventModel.php';
 
 class EventController extends AppController
 {
-    public function events(){
-        if(!$this->isPost()){
-            $this->render('events');
+    public function events()
+    {
+        if ($this->isGet()) {
+            return $this->render('events');
         }
 
-        else{
-            $eventRepository = new EventRepository();
-            $userRepository = new UserRepository();
-            $userEventRepository = new UserEventRepository();
+        $eventRepository = new EventRepository();
+        $userRepository = new UserRepository();
+        $userEventRepository = new UserEventRepository();
 
-            $eventName = $_POST["event-name"];
-            $userId = $userRepository->getUserIdByUsername($_COOKIE["user"]);
-            $eventId = $eventRepository->getEventIdByEventName($eventName);
-            $userEventRepository->removeUserFromEvent($userId, $eventId);
+        $eventName = $_POST["event-name"];
+        $userId = $userRepository->getUserIdByUsername($_COOKIE["user"]);
+        $eventId = $eventRepository->getEventIdByEventName($eventName);
+        $userEventRepository->removeUserFromEvent($userId, $eventId);
 
-            $url = "http://$_SERVER[HTTP_HOST]";
-            header("Location: {$url}/events");
-        }
-
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/events");
     }
 
-    public function getEvents(){
+    public function getEvents()
+    {
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
         if ($contentType === "application/json") {
@@ -52,7 +51,7 @@ class EventController extends AppController
 
             $eventModels = [];
 
-            foreach ($userEvents as $eventId){
+            foreach ($userEvents as $eventId) {
                 $event = $eventRepository->getEventByEventId($eventId);
                 //var_dump($event);
                 $creator = $userRepository->getUsernameById($event->getCreatorId());
