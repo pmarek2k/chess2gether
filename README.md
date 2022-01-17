@@ -5,7 +5,7 @@ Website which allows to organize or join existing chess event.
 </br>
 ![Website](./public/img/image.png)
 
-#Built with
+## Built with
 
 - HTML
 - CSS
@@ -15,7 +15,7 @@ Website which allows to organize or join existing chess event.
 - Mapbox
 
 
-#Getting started
+## Getting started
 Requirements:
 - [Docker](https://www.docker.com/)
 - Any text editor (for example [vsCode](https://www.docker.com/))
