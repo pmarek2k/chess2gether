@@ -9,8 +9,9 @@ const map = new mapboxgl.Map({
     zoom: 12 // starting zoom
 });
 
+const spinner = document.getElementById("spinner");
+const mapDiv = document.getElementById("map");
 const button = document.getElementsByClassName("submitMarkerButton")[0];
-button.disabled = true;
 
 let geojson = {
     "name":"MyFeatureType",
@@ -18,6 +19,7 @@ let geojson = {
     "features":[]
 };
 
+spinner.removeAttribute('hidden');
 fetch("/getLocations", {
     headers: {
         'Content-Type': 'application/json',
@@ -27,10 +29,13 @@ fetch("/getLocations", {
     return response.json();
 }).then(function (events) {
     loadEvents(events)
+    spinner.setAttribute('hidden', 'true');
+    mapDiv.removeAttribute('hidden');
+    button.removeAttribute('hidden');
+    button.disabled = true;
 });
 
 function loadEvents(events) {
-    console.log(events);
     for(let i = 0; i < events.length; i++){
         geojson.features.push({ "type": "Feature","geometry": {"type": "Point","coordinates": [events[i].location.latitude, events[i].location.longitude]},"properties": {'title':events[i].name, 'creator':events[i].creator, 'begin_time' : events[i].begin_time, 'max_players' : events[i].max_players} });
     }

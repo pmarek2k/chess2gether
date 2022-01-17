@@ -296,7 +296,7 @@ input::placeholder {
     box-sizing: border-box;
     color: #24292E;
     cursor: pointer;
-    display: inline-block;
+    /* display: inline-block; */
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 14px;
     font-weight: 500;
@@ -355,6 +355,8 @@ input::placeholder {
 
 .event {
     font-size: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     border-radius: 3vw;
@@ -365,4 +367,35 @@ input::placeholder {
     background: #D3AF66 0% 0% no-repeat padding-box;
     height: 10vh;
     align-items: center;
+}
+
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

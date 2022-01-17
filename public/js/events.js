@@ -1,3 +1,6 @@
+const spinner = document.getElementById("spinner");
+
+spinner.removeAttribute('hidden');
 fetch("/getEvents", {
     headers: {
         'Content-Type': 'application/json',
@@ -6,9 +9,11 @@ fetch("/getEvents", {
 }).then(function (response) {
     return response.json();
 }).then(function (events) {
-    console.log(events);
-    loadEvents(events)
+    loadEvents(events);
+    spinner.setAttribute('hidden', 'true');
 });
+
+
 
 function loadEvents(events) {
     let eventsView = document.getElementById('event-view');
@@ -18,7 +23,7 @@ function loadEvents(events) {
 <section>${events[i].name}</section><section>Players: ${events[i].max_players}</section><section>Starts: ${events[i].begin_time.replace('T', ' ')}</section>
     <form method="post">
         <input type="text" id="event-name" name="event-name" value='${events[i].name}' hidden = true>
-        <button className="submitMarkerButton" id=button${i} type="submit">Sign out from event</button>
+        <button class="submitMarkerButton" id=button${i} type="submit">Sign out from event</button>
     </form>
 </div>`);
     }

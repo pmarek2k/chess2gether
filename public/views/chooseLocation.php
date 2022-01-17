@@ -22,7 +22,8 @@ include 'navbar.php';
 echo createNavbar();
 ?>
 <div class=map-main-content>
-    <div id='map'></div>
+    <div hidden id = "spinner"></div>
+    <div hidden id='map'></div>
     <div class="messages-white">
         <?php if (isset($messages)) {
             foreach ($messages as $message) {
@@ -34,7 +35,7 @@ echo createNavbar();
     </div>
     <form method="post">
         <input type="text" id="event-name" name="event-name" hidden = true>
-        <button class="submitMarkerButton">Choose event</button>
+        <button class="submitMarkerButton" hidden>Choose event</button>
     </form>
 </div>
 </body>

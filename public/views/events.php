@@ -28,6 +28,7 @@ echo createNavbar();
     }
     ?>
 </div>
+<div hidden id = "spinner"></div>
 <div id = "event-view">
 </div>
 </body>
