@@ -30,7 +30,6 @@ fetch("/getLocations", {
 }).then(function (events) {
     loadEvents(events)
     spinner.setAttribute('hidden', 'true');
-    mapDiv.removeAttribute('hidden');
     button.removeAttribute('hidden');
     button.disabled = true;
 });
