@@ -5,6 +5,9 @@ Website which allows to organize or join existing chess event.
 </br>
 ![Website](./public/img/image.png)
 
+## Description
+This website allows to join or create new chess events anywhere in the world. To join an event You can simply choose one from existing on the map. If you are an event organizer you can place your event in your desired place, and supplement all required informations about event.
+
 ## Built with
 
 - HTML
