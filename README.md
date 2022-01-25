@@ -33,6 +33,11 @@ cd chess2gether
 ``` 
 docker-compose build
 ```
+- Add config.js to public js with following code:
+``` 
+export const accessToken = 'YOUR_ACCESS_TOKEN';
+```
+To get your Mapbox access token login to [Mapbox](https://www.mapbox.com/) and create one.
 - Run your application:
 ```angular2html
 docker-compose up
