@@ -33,7 +33,7 @@ cd chess2gether
 ``` 
 docker-compose build
 ```
-- Add config.js to public js with following code:
+- Add config.js file to public/js with following code:
 ``` 
 export const accessToken = 'YOUR_ACCESS_TOKEN';
 ```
